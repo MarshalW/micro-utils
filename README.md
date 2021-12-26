@@ -6,10 +6,11 @@
 
 - gps 坐标得到地址信息（百度地图 api）
 
-
 ## 代码示例
 
 ### gps 坐标得到地址信息（百度地图 api）
+
+带 cache 功能，减少对百度地图调用配额的消耗。
 
 ```py
 #!/usr/bin/env python3
@@ -25,4 +26,8 @@ address_data = gps.get_address(location=(lat, lng), ak=AK, sk=SK)
 print(address_data)
 ```
 
+清除 cache:
 
+```py
+gps.clear_cache()
+```
