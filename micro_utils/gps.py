@@ -76,4 +76,5 @@ def get_address(location, ak, sk):
         gps_data = get_address_no_cache(lat, lng, ak, sk)
         set_address_to_cache(lat, lng, gps_data)
 
-    return Dict(json.loads(gps_data))
+    # return Dict(json.loads(gps_data))
+    return gps_data
